@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LHTest.Operations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace LHTest
     {
         static void Main(string[] args)
         {
+            List<IOperator> operators = OperatorLoader.LoadOperators();
         }
     }
 }

@@ -1,0 +1,8 @@
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\bin\Debug\UI.exe.config
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\bin\Debug\UI.exe
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\bin\Debug\UI.pdb
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\obj\Debug\UI.exe
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\UI\obj\Debug\UI.pdb

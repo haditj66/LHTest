@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E9C43AD-3D81-4663-816A-89BAFD2E316B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A148F468-D2E0-4214-92F6-9904D60C45A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LHTest</RootNamespace>
-    <AssemblyName>LHTest</AssemblyName>
+    <RootNamespace>LHTest.Rules</RootNamespace>
+    <AssemblyName>LHTest.Rules</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,23 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnswerAnalyzer.cs" />
-    <Compile Include="Equation\Equation.cs" />
-    <Compile Include="Equation\EquationMaker.cs" />
-    <Compile Include="Operations\DivideOperator.cs" />
-    <Compile Include="Operations\IOperator.cs" />
-    <Compile Include="Operations\MinusOperator.cs" />
-    <Compile Include="Operations\MultiplyOperator.cs" />
-    <Compile Include="Operations\OperatorLoader.cs" />
-    <Compile Include="Operations\PlusOperator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="IRule.cs" />
+    <Compile Include="Plus\NoGreaterThan100.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestStats.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

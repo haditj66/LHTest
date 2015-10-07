@@ -1,0 +1,5 @@
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest.Rules\bin\Debug\LHTest.Rules.dll
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest.Rules\bin\Debug\LHTest.Rules.pdb
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest.Rules\obj\Debug\LHTest.Rules.csprojResolveAssemblyReference.cache
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest.Rules\obj\Debug\LHTest.Rules.dll
+C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest.Rules\obj\Debug\LHTest.Rules.pdb
