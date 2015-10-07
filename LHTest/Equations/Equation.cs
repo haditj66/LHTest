@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LHTest.Equation
+namespace LHTest.Equations
 {
     /// <summary>
     /// Holds info about the equation
     /// </summary>
     public class Equation
     {
-        public string FirstNum { get; set; }
-        public string SecondNum { get; set; }
+        public int FirstNum { get; set; }
+        public int SecondNum { get; set; }
+        public float Answer { get; set; }
         public string Operation { get; set; }
 
         public string FullEquation
@@ -26,18 +27,11 @@ namespace LHTest.Equation
                 eq.Append(" ");
                 eq.Append(SecondNum);
                 eq.Append("=");
+                eq.Append(" ");
 
                 return eq.ToString();
             } 
-        }
-
-        public string Answer
-        {
-            get
-            {
-                return "";
-            }
-        }
+        } 
 
     }
 }

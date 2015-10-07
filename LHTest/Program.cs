@@ -1,4 +1,4 @@
-﻿using LHTest.Operations;
+﻿using LHTest.Equations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,15 @@ namespace LHTest
     {
         static void Main(string[] args)
         {
-            List<IOperator> operators = OperatorLoader.LoadOperators();
+
+            while (true)
+            {
+                EquationMaker em = new EquationMaker();
+                Equation eq = em.CreateEquation();
+
+                Console.WriteLine(eq.FullEquation + " " + eq.Answer);
+                Console.ReadLine();
+            }
         }
     }
 }

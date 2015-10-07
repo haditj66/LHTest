@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnswerAnalyzer.cs" />
-    <Compile Include="Equation\Equation.cs" />
-    <Compile Include="Equation\EquationMaker.cs" />
+    <Compile Include="Equations\Equation.cs" />
+    <Compile Include="Equations\EquationMaker.cs" />
     <Compile Include="Operations\DivideOperator.cs" />
     <Compile Include="Operations\IOperator.cs" />
     <Compile Include="Operations\MinusOperator.cs" />
