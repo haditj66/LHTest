@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace LHTest
 {
+
+    /// <summary>
+    /// This class will analyze the answer that has been set and decide whether it is correct or wrong.
+    /// </summary>
     class AnswerAnalyzer
     {
     }

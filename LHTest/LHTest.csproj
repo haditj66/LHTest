@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerAnalyzer.cs" />
+    <Compile Include="EquationMaker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace LHTest
 {
-    class EquationMaker
+
+    /// <summary>
+    /// this class will randomly generate an equation for the next question
+    /// </summary>
+    public class EquationMaker
     {
+
     }
 }
