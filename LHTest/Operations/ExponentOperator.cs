@@ -7,25 +7,33 @@ using System.Threading.Tasks;
 
 namespace LHTest.Operations
 {
-    class DivideOperator : IOperator
-    {  
+    public class ExponentOperator : IOperator
+    {
         public string Name
         {
-            get { return "/"; }
+            get
+            {
+                return "^";
+            }
         }
+
 
         public Func<int, int, float> TheOperation
         {
-            get { return (x,y) => x/y; }
+            get
+            {
+                return (x, y) => (float)Math.Pow(x, y);
+            }
         }
 
         public Rules OperationRules
         {
             get
             {
-                DivideRules p = new DivideRules();
+                ExponentRules p = new ExponentRules();
                 return p;
             }
         }
+
     }
 }

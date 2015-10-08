@@ -1,5 +1,4 @@
 C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest\bin\Debug\LHTest.exe.config
-C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest\obj\Debug\LHTest.csprojResolveAssemblyReference.cache
 C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest\bin\Debug\LHTest.exe
 C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest\bin\Debug\LHTest.pdb
 C:\Users\Hadi\Documents\Visual Studio 2012\Projects\LHTest\LHTest\obj\Debug\LHTest.exe

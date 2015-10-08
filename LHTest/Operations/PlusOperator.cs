@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LHTest.Operations.OpRules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,16 @@ namespace LHTest.Operations
             get 
             {
                 return (x, y) => x + y; 
+            }
+        }
+
+
+        public Rules OperationRules
+        {
+            get
+            {
+                PlusRules p = new PlusRules();  
+                return p;
             }
         }
     }

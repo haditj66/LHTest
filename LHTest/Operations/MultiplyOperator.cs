@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LHTest.Operations.OpRules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,15 @@ namespace LHTest.Operations
         public Func<int, int, float> TheOperation
         {
             get {return (x,y) => x * y; }
+        }
+
+        public Rules OperationRules
+        {
+            get
+            {
+                MultiplyRules p = new MultiplyRules();
+                return p;
+            }
         }
     }
 }

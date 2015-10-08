@@ -27,21 +27,18 @@ namespace LHTest.Equations
         public Equation CreateEquation()
         {
             Equation eq = new Equation();
-            IOperator theOp = GetRandomOperator();
-
+            IOperator theOp = GetRandomOperator(); 
             eq.Operation = theOp.Name;
-             
-            //while a rule is broken, generate a different set of numbers to get an appropriate equation
-            bool ruleBroken = true; 
-            while (ruleBroken)
-            {
-                eq.FirstNum = GetRandomNumber(1, 50);
-                eq.SecondNum = GetRandomNumber(1, 50);
-                eq.Answer = theOp.TheOperation(eq.FirstNum, eq.SecondNum);
 
-                //this is where I would check the rule
-                ruleBroken = false; 
-            }
+            //get the set of numbers that followed the rules of the operator
+            SetsOfNumbersLoader ss = new SetsOfNumbersLoader(theOp.OperationRules);
+            var setOfNumbers = ss.GetSetOfNumbers();
+
+            //pick random set and set that into the equation
+            var randCombo = setOfNumbers[r.Next(0, setOfNumbers.Count())]; 
+            eq.FirstNum = randCombo.X;
+            eq.SecondNum = randCombo.Y;
+            eq.Answer = theOp.TheOperation(eq.FirstNum, eq.SecondNum); 
 
             return eq;
         }
@@ -50,7 +47,7 @@ namespace LHTest.Equations
         private IOperator GetRandomOperator()
         { 
             //get a random operator from the list of operators.
-            return Operators[r.Next(0, (Operators.Count - 1))];
+            return Operators[r.Next(0, (Operators.Count))];
         }
 
         private int GetRandomNumber(int min, int max)
