@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnswerAnalyzer.cs" />
+    <Compile Include="Test\AnswerAnalyzer.cs" />
     <Compile Include="Equations\Equation.cs" />
     <Compile Include="Equations\EquationMaker.cs" />
     <Compile Include="Extensions\LinqExtensions.cs" />
@@ -61,7 +61,10 @@
     <Compile Include="Operations\PlusOperator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestStats.cs" />
+    <Compile Include="Test\EventManager\EventArgClasses\StartedTestEventArgs.cs" />
+    <Compile Include="Test\EventManager\UserEvents.cs" />
+    <Compile Include="Test\TestManager.cs" />
+    <Compile Include="Test\TestStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
