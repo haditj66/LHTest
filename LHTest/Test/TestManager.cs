@@ -14,6 +14,7 @@ namespace LHTest.Test
 
         public TestStats TheTestStats;
         public EquationMaker EM;
+        public AnswerAnalyzer AA;
 
         public TestManager()
         { 
@@ -27,35 +28,58 @@ namespace LHTest.Test
         public void StartTheTest(object sender, StartedTestEventArgs e)
         { 
             EM = new EquationMaker();
-            TheTestStats = new TestStats(e.Name, e.Difficulty, EM.CreateEquation());  
+            TheTestStats = new TestStats(e.Name, e.Difficulty, EM.CreateEquation(), 5);
+            AA = new AnswerAnalyzer(TheTestStats);
         }   
 
 
         public void FinishTheTestForTheUser(object sender, EventArgs e)
         {
-            float finalScore = TheTestStats.QuestionsRight / TheTestStats.TotalQuestions;
+            float finalScore = (TheTestStats.QuestionsRight / (TheTestStats.QuestionsRight + TheTestStats.QuestionsWrong)) * 100;
             TheTestStats.FinalScore = finalScore; 
         }
         
 
         public void HandleUserAnsweredAQuestion(object sender, EventArgs e)
-        {
-            TheTestStats.CurrentEquation = EM.CreateEquation();
+        {  
+            TheTestStats.TotalQuestions -= 1;  
 
-            TheTestStats.TotalQuestions -= 1;
+
         }
 
 
         public void MarkThatUserGotQuestionWrong(object sender, EventArgs e)
         {
             TheTestStats.QuestionsWrong += 1;
+
+            //now you can create a new equation
+            TheTestStats.CurrentEquation = EM.CreateEquation();
+
+            CheckIfUserIsDoneWithTest();
         }
+
 
         public void MarkThatUserGotQuestionRight(object sender, EventArgs e)
         {
             TheTestStats.QuestionsRight += 1;
+
+            //now you can create a new equation
+            TheTestStats.CurrentEquation = EM.CreateEquation();
+
+            CheckIfUserIsDoneWithTest();
         }
 
+
+        private void CheckIfUserIsDoneWithTest()
+        {
+            if (TheTestStats.TotalQuestions <= 0)
+            {
+                //calculate final score
+                float finalScore = (TheTestStats.QuestionsRight*100 / (TheTestStats.QuestionsRight + TheTestStats.QuestionsWrong));
+
+                UserEvents.OnUserFinishedTheTest(this, new FinalScoreEventArgs() { FinalScore = finalScore });
+            }
+        }
 
     }
 }

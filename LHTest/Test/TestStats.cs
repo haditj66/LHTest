@@ -20,8 +20,7 @@ namespace LHTest.Test
         public int QuestionsRight { get; set; }
         public float FinalScore { get; set; }
 
-        public Equation CurrentEquation { get; set; } 
-
+        public Equation CurrentEquation { get; set; }  
 
         public TestStats(string Name, string Difficulty, Equation currentEquation, int TotalQuestions = 10)
         {
@@ -29,6 +28,15 @@ namespace LHTest.Test
             this.Difficulty = Difficulty;
             this.TotalQuestions = TotalQuestions;
             this.CurrentEquation = currentEquation;
+
+        }
+
+
+        public enum Difficulties
+        {
+            Easy,
+            Medium,
+            Hard
         }
     }
 }
